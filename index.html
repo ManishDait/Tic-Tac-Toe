@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet"  href="./index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./index.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <audio id="audio">
+                <source src="./assets/click_sound.wav" type="audio/wav">
+            </audio>
+            <div class="bttn-container" style="border-bottom: 6px solid black;">
+                <div id="1" class="bttn" style="border-right: 6px solid black;" onclick="Onclick(this.id)"></div>
+                <div id="2" class="bttn" style="border-right: 6px solid black;" onclick="Onclick(this.id)"></div>
+                <div id="3" class="bttn" onclick="Onclick(this.id)"></div>
+            </div>
+
+            <div class="bttn-container" style="border-bottom: 6px solid black;">
+                <div id="4" class="bttn" style="border-right: 6px solid black;" onclick="Onclick(this.id)"></div>
+                <div id="5" class="bttn" style="border-right: 6px solid black;" onclick="Onclick(this.id)"></div>
+                <div id="6" class="bttn" onclick="Onclick(this.id)"></div>
+            </div>
+
+            <div class="bttn-container">
+                <div id="7" class="bttn" style="border-right: 6px solid black;" onclick="Onclick(this.id)"></div>
+                <div id="8" class="bttn" style="border-right: 6px solid black;" onclick="Onclick(this.id)"></div>
+                <div id="9" class="bttn" onclick="Onclick(this.id)"></div>
+            </div>
+            
+        </div>
+
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <table class="table">
+            <tr>
+                <td id="P1">Player (X)</td>
+                <td>Tie</td>
+                <td id="P2">Computer (O)</td>
+            </tr>
+    
+            <tr>
+                <td id="player_xscore">0</td>
+                <td id="draw_score">0</td>
+                <td id="player_yscore">0</td>
+            </tr>
+        </table>
+
+    </div>
+    
+
+    <div>
+        <button class="btn" onclick="playAgain()">Play Again</button>
+        <button id="mode" class="btn" onclick="changeMode()">Two Player</button>
+    </div>
+    </body>
+</html>

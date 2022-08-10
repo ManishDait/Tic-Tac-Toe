@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bttn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bttn{
+    height: 10vw;
+    width: 10vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table{
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.table tr{
+    padding: 10px;
+    margin: 30px;
+}
+
+#P2{
+    color: gray;
+}
+
+.table td{
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    padding: 10px 30px;
+}
+
+
+i{
+    height: fit-content;
+    display: flex;
+    font-size: 3vw;
+    align-items: center;
+    text-align: center;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    padding: 0px 10px;
+    font-size: 1.4vw;
+    border-radius: 5px;
+    height: 3vw;
+}
