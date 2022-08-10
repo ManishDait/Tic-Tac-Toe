@@ -526,6 +526,9 @@ function playAgain(){
 
 function changeMode(){
     if(comp == true){
+         x_wcount = 0;
+         y_wcount = 0;
+         draw = 0;
         playAgain();
         comp = false;
         document.getElementById('mode').innerHTML = 'Play with Computer'
@@ -534,6 +537,9 @@ function changeMode(){
     }
 
     else{
+        x_wcount = 0;
+         y_wcount = 0;
+         draw = 0;
         playAgain();
         comp = true;
         document.getElementById('mode').innerHTML = 'Two Player'
