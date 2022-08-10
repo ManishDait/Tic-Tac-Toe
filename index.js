@@ -529,6 +529,10 @@ function changeMode(){
          x_wcount = 0;
          y_wcount = 0;
          draw = 0;
+         var score = document.getElementById('player_xscore');
+         score.innerHTML = x_wcount;
+         var score = document.getElementById('player_yscore');
+         score.innerHTML = y_wcount;
         playAgain();
         comp = false;
         document.getElementById('mode').innerHTML = 'Play with Computer'
@@ -537,6 +541,10 @@ function changeMode(){
     }
 
     else{
+        var score = document.getElementById('player_xscore');
+         score.innerHTML = x_wcount;
+         var score = document.getElementById('player_yscore');
+         score.innerHTML = y_wcount;
         x_wcount = 0;
          y_wcount = 0;
          draw = 0;
