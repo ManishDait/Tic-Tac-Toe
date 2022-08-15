@@ -533,6 +533,8 @@ function changeMode(){
          score.innerHTML = x_wcount;
          var score = document.getElementById('player_yscore');
          score.innerHTML = y_wcount;
+         var score = document.getElementById('draw_score');
+        score.innerHTML = draw;
         playAgain();
         comp = false;
         document.getElementById('mode').innerHTML = 'Play with Computer'
@@ -545,6 +547,8 @@ function changeMode(){
          score.innerHTML = x_wcount;
          var score = document.getElementById('player_yscore');
          score.innerHTML = y_wcount;
+         var score = document.getElementById('draw_score');
+        score.innerHTML = draw;
         x_wcount = 0;
          y_wcount = 0;
          draw = 0;
