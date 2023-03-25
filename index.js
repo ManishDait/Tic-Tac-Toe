@@ -9,15 +9,23 @@ let x_array = [];
 let y_array = [];
 let main = [];
 
+const timer = ms => new Promise(res=>setTimeout(res,ms));
 
+
+async function wait(){
+    await timer(1000);
+}
     
 
 function Onclick(id){
     if(x==true && comp==true && !x_array.includes(id) && !y_array.includes(id) && x_wins == false && y_wins == false){
         document.getElementById(id).innerHTML = 'X';
         let audio = document.getElementById('audio');
-        document.getElementById('P1').style.color = 'gray';
-        document.getElementById('P2').style.color = 'black';
+        document.getElementById('P1').style.color = 'rgb(49, 49, 49)';
+        document.getElementById('P2').style.color = 'white';
+
+        document.getElementById('player_xscore').style.color = 'rgb(49, 49, 49)';
+        document.getElementById('player_yscore').style.color = 'white';
         audio.pause();
         audio.play();
         x_array.push(id);
@@ -31,13 +39,13 @@ function Onclick(id){
        
  
         if(x_array.includes('1') && x_array.includes('4') && x_array.includes('7')){
-         document.getElementById('1').style.color = "black";
+         document.getElementById('1').style.color = "rgb(216, 15, 216)";
          document.getElementById('2').style.color = "gray";
          document.getElementById('3').style.color = "gray";
-         document.getElementById('4').style.color = "black";
+         document.getElementById('4').style.color = "rgb(216, 15, 216)";
          document.getElementById('5').style.color = "gray";
          document.getElementById('6').style.color = "gray";
-         document.getElementById('7').style.color = "black";
+         document.getElementById('7').style.color = "rgb(216, 15, 216)";
          document.getElementById('8').style.color = "gray";
          document.getElementById('9').style.color = "gray";
          x_wins = true;
@@ -49,13 +57,13 @@ function Onclick(id){
  
         if(x_array.includes('2') && x_array.includes('5') && x_array.includes('8')){
          document.getElementById('1').style.color = "gray";
-         document.getElementById('2').style.color = "black";
+         document.getElementById('2').style.color = "rgb(216, 15, 216)";
          document.getElementById('3').style.color = "gray";
          document.getElementById('4').style.color = "gray";
-         document.getElementById('5').style.color = "black";
+         document.getElementById('5').style.color = "rgb(216, 15, 216)";
          document.getElementById('6').style.color = "gray";
          document.getElementById('7').style.color = "gray";
-         document.getElementById('8').style.color = "black";
+         document.getElementById('8').style.color = "rgb(216, 15, 216)";
          document.getElementById('9').style.color = "gray";
          x_wins = true;
          x_wcount ++;
@@ -66,13 +74,13 @@ function Onclick(id){
         if(x_array.includes('3') && x_array.includes('6') && x_array.includes('9')){
          document.getElementById('1').style.color = "gray";
          document.getElementById('2').style.color = "gray";
-         document.getElementById('3').style.color = "black";
+         document.getElementById('3').style.color = "rgb(216, 15, 216)";
          document.getElementById('4').style.color = "gray";
          document.getElementById('5').style.color = "gray";
-         document.getElementById('6').style.color = "black";
+         document.getElementById('6').style.color = "rgb(216, 15, 216)";
          document.getElementById('7').style.color = "gray";
          document.getElementById('8').style.color = "gray";
-         document.getElementById('9').style.color = "black";
+         document.getElementById('9').style.color = "rgb(216, 15, 216)";
          x_wins = true;
          x_wcount ++;
          var score = document.getElementById('player_xscore');
@@ -81,9 +89,9 @@ function Onclick(id){
  
  
         if(x_array.includes('1') && x_array.includes('2') && x_array.includes('3')){
-         document.getElementById('1').style.color = "black";
-         document.getElementById('2').style.color = "black";
-         document.getElementById('3').style.color = "black";
+         document.getElementById('1').style.color = "rgb(216, 15, 216)";
+         document.getElementById('2').style.color = "rgb(216, 15, 216)";
+         document.getElementById('3').style.color = "rgb(216, 15, 216)";
          document.getElementById('4').style.color = "gray";
          document.getElementById('5').style.color = "gray";
          document.getElementById('6').style.color = "gray";
@@ -100,9 +108,9 @@ function Onclick(id){
          document.getElementById('1').style.color = "gray";
          document.getElementById('2').style.color = "gray";
          document.getElementById('3').style.color = "gray";
-         document.getElementById('4').style.color = "black";
-         document.getElementById('5').style.color = "black";
-         document.getElementById('6').style.color = "black";
+         document.getElementById('4').style.color = "rgb(216, 15, 216)";
+         document.getElementById('5').style.color = "rgb(216, 15, 216)";
+         document.getElementById('6').style.color = "rgb(216, 15, 216)";
          document.getElementById('7').style.color = "gray";
          document.getElementById('8').style.color = "gray";
          document.getElementById('9').style.color = "gray";
@@ -119,9 +127,9 @@ function Onclick(id){
          document.getElementById('4').style.color = "gray";
          document.getElementById('5').style.color = "gray";
          document.getElementById('6').style.color = "gray";
-         document.getElementById('7').style.color = "black";
-         document.getElementById('8').style.color = "black";
-         document.getElementById('9').style.color = "black";
+         document.getElementById('7').style.color = "rgb(216, 15, 216)";
+         document.getElementById('8').style.color = "rgb(216, 15, 216)";
+         document.getElementById('9').style.color = "rgb(216, 15, 216)";
          x_wins = true;
          x_wcount ++;
          var score = document.getElementById('player_xscore');
@@ -130,15 +138,15 @@ function Onclick(id){
  
  
         if(x_array.includes('1') && x_array.includes('5') && x_array.includes('9')){
-         document.getElementById('1').style.color = "black";
+         document.getElementById('1').style.color = "rgb(216, 15, 216)";
          document.getElementById('2').style.color = "gray";
          document.getElementById('3').style.color = "gray";
          document.getElementById('4').style.color = "gray";
-         document.getElementById('5').style.color = "black";
+         document.getElementById('5').style.color = "rgb(216, 15, 216)";
          document.getElementById('6').style.color = "gray";
          document.getElementById('7').style.color = "gray";
          document.getElementById('8').style.color = "gray";
-         document.getElementById('9').style.color = "black";
+         document.getElementById('9').style.color = "rgb(216, 15, 216)";
          x_wins = true;
          x_wcount ++;
          var score = document.getElementById('player_xscore');
@@ -148,11 +156,11 @@ function Onclick(id){
         if(x_array.includes('3') && x_array.includes('5') && x_array.includes('7')){
          document.getElementById('1').style.color = "gray";
          document.getElementById('2').style.color = "gray";
-         document.getElementById('3').style.color = "black";
+         document.getElementById('3').style.color = "rgb(216, 15, 216)";
          document.getElementById('4').style.color = "gray";
-         document.getElementById('5').style.color = "black";
+         document.getElementById('5').style.color = "rgb(216, 15, 216)";
          document.getElementById('6').style.color = "gray";
-         document.getElementById('7').style.color = "black";
+         document.getElementById('7').style.color = "rgb(216, 15, 216)";
          document.getElementById('8').style.color = "gray";
          document.getElementById('9').style.color = "gray";
          x_wins = true;
@@ -172,8 +180,11 @@ function Onclick(id){
    else if(x==true && !x_array.includes(id) && !y_array.includes(id) && x_wins == false && y_wins == false){
        document.getElementById(id).innerHTML = 'X';
        let audio = document.getElementById('audio');
-       document.getElementById('P1').style.color = 'gray';
-       document.getElementById('P2').style.color = 'black';
+       document.getElementById('P1').style.color = 'rgb(49, 49, 49)';
+       document.getElementById('P2').style.color = 'white';
+
+       document.getElementById('player_xscore').style.color = 'rgb(49, 49, 49)';
+       document.getElementById('player_yscore').style.color = 'white';
        audio.pause();
        audio.play();
        x_array.push(id);
@@ -185,13 +196,13 @@ function Onclick(id){
       
 
        if(x_array.includes('1') && x_array.includes('4') && x_array.includes('7')){
-        document.getElementById('1').style.color = "black";
+        document.getElementById('1').style.color = "rgb(216, 15, 216)";
         document.getElementById('2').style.color = "gray";
         document.getElementById('3').style.color = "gray";
-        document.getElementById('4').style.color = "black";
+        document.getElementById('4').style.color = "rgb(216, 15, 216)";
         document.getElementById('5').style.color = "gray";
         document.getElementById('6').style.color = "gray";
-        document.getElementById('7').style.color = "black";
+        document.getElementById('7').style.color = "rgb(216, 15, 216)";
         document.getElementById('8').style.color = "gray";
         document.getElementById('9').style.color = "gray";
         x_wins = true;
@@ -203,13 +214,13 @@ function Onclick(id){
 
        if(x_array.includes('2') && x_array.includes('5') && x_array.includes('8')){
         document.getElementById('1').style.color = "gray";
-        document.getElementById('2').style.color = "black";
+        document.getElementById('2').style.color = "rgb(216, 15, 216)";
         document.getElementById('3').style.color = "gray";
         document.getElementById('4').style.color = "gray";
-        document.getElementById('5').style.color = "black";
+        document.getElementById('5').style.color = "rgb(216, 15, 216)";
         document.getElementById('6').style.color = "gray";
         document.getElementById('7').style.color = "gray";
-        document.getElementById('8').style.color = "black";
+        document.getElementById('8').style.color = "rgb(216, 15, 216)";
         document.getElementById('9').style.color = "gray";
         x_wins = true;
         x_wcount ++;
@@ -220,13 +231,13 @@ function Onclick(id){
        if(x_array.includes('3') && x_array.includes('6') && x_array.includes('9')){
         document.getElementById('1').style.color = "gray";
         document.getElementById('2').style.color = "gray";
-        document.getElementById('3').style.color = "black";
+        document.getElementById('3').style.color = "rgb(216, 15, 216)";
         document.getElementById('4').style.color = "gray";
         document.getElementById('5').style.color = "gray";
-        document.getElementById('6').style.color = "black";
+        document.getElementById('6').style.color = "rgb(216, 15, 216)";
         document.getElementById('7').style.color = "gray";
         document.getElementById('8').style.color = "gray";
-        document.getElementById('9').style.color = "black";
+        document.getElementById('9').style.color ="rgb(216, 15, 216)";
         x_wins = true;
         x_wcount ++;
         var score = document.getElementById('player_xscore');
@@ -235,9 +246,9 @@ function Onclick(id){
 
 
        if(x_array.includes('1') && x_array.includes('2') && x_array.includes('3')){
-        document.getElementById('1').style.color = "black";
-        document.getElementById('2').style.color = "black";
-        document.getElementById('3').style.color = "black";
+        document.getElementById('1').style.color = "rgb(216, 15, 216)";
+        document.getElementById('2').style.color = "rgb(216, 15, 216)";
+        document.getElementById('3').style.color = "rgb(216, 15, 216)";
         document.getElementById('4').style.color = "gray";
         document.getElementById('5').style.color = "gray";
         document.getElementById('6').style.color = "gray";
@@ -254,9 +265,9 @@ function Onclick(id){
         document.getElementById('1').style.color = "gray";
         document.getElementById('2').style.color = "gray";
         document.getElementById('3').style.color = "gray";
-        document.getElementById('4').style.color = "black";
-        document.getElementById('5').style.color = "black";
-        document.getElementById('6').style.color = "black";
+        document.getElementById('4').style.color = "rgb(216, 15, 216)";
+        document.getElementById('5').style.color = "rgb(216, 15, 216)";
+        document.getElementById('6').style.color ="rgb(216, 15, 216)";
         document.getElementById('7').style.color = "gray";
         document.getElementById('8').style.color = "gray";
         document.getElementById('9').style.color = "gray";
@@ -273,9 +284,9 @@ function Onclick(id){
         document.getElementById('4').style.color = "gray";
         document.getElementById('5').style.color = "gray";
         document.getElementById('6').style.color = "gray";
-        document.getElementById('7').style.color = "black";
-        document.getElementById('8').style.color = "black";
-        document.getElementById('9').style.color = "black";
+        document.getElementById('7').style.color = "rgb(216, 15, 216)";
+        document.getElementById('8').style.color = "rgb(216, 15, 216)";
+        document.getElementById('9').style.color = "rgb(216, 15, 216)";
         x_wins = true;
         x_wcount ++;
         var score = document.getElementById('player_xscore');
@@ -284,15 +295,15 @@ function Onclick(id){
 
 
        if(x_array.includes('1') && x_array.includes('5') && x_array.includes('9')){
-        document.getElementById('1').style.color = "black";
+        document.getElementById('1').style.color = "rgb(216, 15, 216)";
         document.getElementById('2').style.color = "gray";
         document.getElementById('3').style.color = "gray";
         document.getElementById('4').style.color = "gray";
-        document.getElementById('5').style.color = "black";
+        document.getElementById('5').style.color = "rgb(216, 15, 216)";
         document.getElementById('6').style.color = "gray";
         document.getElementById('7').style.color = "gray";
         document.getElementById('8').style.color = "gray";
-        document.getElementById('9').style.color = "black";
+        document.getElementById('9').style.color = "rgb(216, 15, 216)";
         x_wins = true;
         x_wcount ++;
         var score = document.getElementById('player_xscore');
@@ -302,11 +313,11 @@ function Onclick(id){
        if(x_array.includes('3') && x_array.includes('5') && x_array.includes('7')){
         document.getElementById('1').style.color = "gray";
         document.getElementById('2').style.color = "gray";
-        document.getElementById('3').style.color = "black";
+        document.getElementById('3').style.color = "rgb(216, 15, 216)";
         document.getElementById('4').style.color = "gray";
-        document.getElementById('5').style.color = "black";
+        document.getElementById('5').style.color = "rgb(216, 15, 216)";
         document.getElementById('6').style.color = "gray";
-        document.getElementById('7').style.color = "black";
+        document.getElementById('7').style.color = "rgb(216, 15, 216)";
         document.getElementById('8').style.color = "gray";
         document.getElementById('9').style.color = "gray";
         x_wins = true;
@@ -326,8 +337,10 @@ function Onclick(id){
     else if(x==false &&  !y_array.includes(id) && !x_array.includes(id) && y_wins == false && x_wins == false){
         document.getElementById(id).innerHTML = 'O';
         x = true;
-        document.getElementById('P1').style.color = 'black';
-        document.getElementById('P2').style.color = 'gray';
+        document.getElementById('P1').style.color = 'white';
+        document.getElementById('P2').style.color = 'rgb(49, 49, 49)';
+        document.getElementById('player_xscore').style.color = 'white';
+        document.getElementById('player_yscore').style.color = 'rgb(49, 49, 49)';
         let audio = document.getElementById('audio');
         audio.pause();
         audio.play();
@@ -336,13 +349,13 @@ function Onclick(id){
         y_array.sort();
 
         if(y_array.includes('1') && y_array.includes('4') && y_array.includes('7')){
-            document.getElementById('1').style.color = "black";
+            document.getElementById('1').style.color = "rgb(216, 15, 216)";
             document.getElementById('2').style.color = "gray";
             document.getElementById('3').style.color = "gray";
-            document.getElementById('4').style.color = "black";
+            document.getElementById('4').style.color = "rgb(216, 15, 216)";
             document.getElementById('5').style.color = "gray";
             document.getElementById('6').style.color = "gray";
-            document.getElementById('7').style.color = "black";
+            document.getElementById('7').style.color = "rgb(216, 15, 216)";
             document.getElementById('8').style.color = "gray";
             document.getElementById('9').style.color = "gray";
             y_wins = true;
@@ -353,13 +366,13 @@ function Onclick(id){
     
            if(y_array.includes('2') && y_array.includes('5') && y_array.includes('8')){
             document.getElementById('1').style.color = "gray";
-            document.getElementById('2').style.color = "black";
+            document.getElementById('2').style.color = "rgb(216, 15, 216)";
             document.getElementById('3').style.color = "gray";
             document.getElementById('4').style.color = "gray";
-            document.getElementById('5').style.color = "black";
+            document.getElementById('5').style.color = "rgb(216, 15, 216)";
             document.getElementById('6').style.color = "gray";
             document.getElementById('7').style.color = "gray";
-            document.getElementById('8').style.color = "black";
+            document.getElementById('8').style.color = "rgb(216, 15, 216)";
             document.getElementById('9').style.color = "gray";
             y_wins = true;
             y_wcount += 1;
@@ -370,13 +383,13 @@ function Onclick(id){
            if(y_array.includes('3') && y_array.includes('6') && y_array.includes('9')){
             document.getElementById('1').style.color = "gray";
             document.getElementById('2').style.color = "gray";
-            document.getElementById('3').style.color = "black";
+            document.getElementById('3').style.color = "rgb(216, 15, 216)";
             document.getElementById('4').style.color = "gray";
             document.getElementById('5').style.color = "gray";
-            document.getElementById('6').style.color = "black";
+            document.getElementById('6').style.color = "rgb(216, 15, 216)";
             document.getElementById('7').style.color = "gray";
             document.getElementById('8').style.color = "gray";
-            document.getElementById('9').style.color = "black";
+            document.getElementById('9').style.color = "rgb(216, 15, 216)";
             y_wins = true;
             y_wcount += 1;
             var score = document.getElementById('player_yscore');
@@ -385,9 +398,9 @@ function Onclick(id){
     
     
            if(y_array.includes('1') && y_array.includes('2') && y_array.includes('3')){
-            document.getElementById('1').style.color = "black";
-            document.getElementById('2').style.color = "black";
-            document.getElementById('3').style.color = "black";
+            document.getElementById('1').style.color = "rgb(216, 15, 216)";
+            document.getElementById('2').style.color = "rgb(216, 15, 216)";
+            document.getElementById('3').style.color = "rgb(216, 15, 216)";
             document.getElementById('4').style.color = "gray";
             document.getElementById('5').style.color = "gray";
             document.getElementById('6').style.color = "gray";
@@ -404,9 +417,9 @@ function Onclick(id){
             document.getElementById('1').style.color = "gray";
             document.getElementById('2').style.color = "gray";
             document.getElementById('3').style.color = "gray";
-            document.getElementById('4').style.color = "black";
-            document.getElementById('5').style.color = "black";
-            document.getElementById('6').style.color = "black";
+            document.getElementById('4').style.color = "rgb(216, 15, 216)";
+            document.getElementById('5').style.color = "rgb(216, 15, 216)";
+            document.getElementById('6').style.color = "rgb(216, 15, 216)";
             document.getElementById('7').style.color = "gray";
             document.getElementById('8').style.color = "gray";
             document.getElementById('9').style.color = "gray";
@@ -423,9 +436,9 @@ function Onclick(id){
             document.getElementById('4').style.color = "gray";
             document.getElementById('5').style.color = "gray";
             document.getElementById('6').style.color = "gray";
-            document.getElementById('7').style.color = "black";
-            document.getElementById('8').style.color = "black";
-            document.getElementById('9').style.color = "black";
+            document.getElementById('7').style.color = "rgb(216, 15, 216)";
+            document.getElementById('8').style.color = "rgb(216, 15, 216)";
+            document.getElementById('9').style.color = "rgb(216, 15, 216)";
             y_wins = true;
             y_wcount += 1;
             var score = document.getElementById('player_yscore');
@@ -434,15 +447,15 @@ function Onclick(id){
     
     
            if(y_array.includes('1') && y_array.includes('5') && y_array.includes('9')){
-            document.getElementById('1').style.color = "black";
+            document.getElementById('1').style.color = "rgb(216, 15, 216)";
             document.getElementById('2').style.color = "gray";
             document.getElementById('3').style.color = "gray";
             document.getElementById('4').style.color = "gray";
-            document.getElementById('5').style.color = "black";
+            document.getElementById('5').style.color = "rgb(216, 15, 216)";
             document.getElementById('6').style.color = "gray";
             document.getElementById('7').style.color = "gray";
             document.getElementById('8').style.color = "gray";
-            document.getElementById('9').style.color = "black";
+            document.getElementById('9').style.color = "rgb(216, 15, 216)";
             y_wins = true;
             y_wcount += 1;
             var score = document.getElementById('player_yscore');
@@ -452,11 +465,11 @@ function Onclick(id){
            if(y_array.includes('3') && y_array.includes('5') && y_array.includes('7')){
             document.getElementById('1').style.color = "gray";
             document.getElementById('2').style.color = "gray";
-            document.getElementById('3').style.color = "black";
+            document.getElementById('3').style.color = "rgb(216, 15, 216)";
             document.getElementById('4').style.color = "gray";
-            document.getElementById('5').style.color = "black";
+            document.getElementById('5').style.color = "rgb(216, 15, 216)";
             document.getElementById('6').style.color = "gray";
-            document.getElementById('7').style.color = "black";
+            document.getElementById('7').style.color = "rgb(216, 15, 216)";
             document.getElementById('8').style.color = "gray";
             document.getElementById('9').style.color = "gray";
             y_wins = true;
@@ -469,7 +482,8 @@ function Onclick(id){
    
 }
 
-function compplay(){
+async function compplay(){
+    await wait()
     let id = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     let randomIndex = Math.floor(Math.random() * id.length);
     let item = id[randomIndex]
@@ -501,8 +515,13 @@ function playAgain(){
     x_wins = false;
     y_wins = false;
     x = true;
-    document.getElementById('P1').style.color = 'black';
-    document.getElementById('P2').style.color = 'gray';
+    document.getElementById('P1').style.color = "white";
+    document.getElementById('P2').style.color = 'rgb(49, 49, 49)';
+
+
+    document.getElementById('player_xscore').style.color = 'white';
+    document.getElementById('player_yscore').style.color = 'rgb(49, 49, 49)';
+    
     document.getElementById('1').style.color = "black";
     document.getElementById('2').style.color = "black";
     document.getElementById('3').style.color = "black";
